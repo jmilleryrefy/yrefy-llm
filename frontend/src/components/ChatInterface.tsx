@@ -34,7 +34,7 @@ export default function ChatInterface() {
 
   const fetchModels = useCallback(async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/models`, {
+      const response = await fetch(`${API_BASE_URL}/models`, {
         headers: { Authorization: `Bearer ${accessToken}` }
       });
       
