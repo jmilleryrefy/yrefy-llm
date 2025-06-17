@@ -1,0 +1,11 @@
+--- /etc/bind/db.192 content ---
+$TTL    604800
+@       IN      SOA     ns.yrefy. admin.yrefy. (
+                     2024103001         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.yrefy.
+82      IN      PTR     it.yrefy.

@@ -1,4 +1,4 @@
-// PM2 Configuration for LLM accessible to NPM Docker container
+// PM2 Configuration for LLM behind Nginx proxy
 module.exports = {
   apps: [
     {
@@ -10,7 +10,7 @@ module.exports = {
       exec_mode: 'fork',
       env: {
         PORT: 8081,
-        HOST: '0.0.0.0',  // Bind to all interfaces for NPM access
+        HOST: '127.0.0.1',  // Only localhost - secure behind proxy
         FLASK_ENV: 'production',
         PYTHONPATH: './backend'
       },
@@ -23,12 +23,12 @@ module.exports = {
     {
       name: 'yrefy-llm-frontend',
       script: 'npm',
-      args: 'run start -- --hostname 0.0.0.0 --port 3002',  // Bind to all interfaces
+      args: 'run start -- --hostname 127.0.0.1 --port 3002',
       cwd: '/home/yrefy-it/yrefy-llm/frontend',
       env: {
         PORT: 3002,
         NODE_ENV: 'production',
-        HOSTNAME: '0.0.0.0'  // Bind to all interfaces for NPM access
+        HOSTNAME: '127.0.0.1'  // Only localhost - secure behind proxy
       },
       error_file: '/home/yrefy-it/yrefy-llm/data/logs/frontend-error.log',
       out_file: '/home/yrefy-it/yrefy-llm/data/logs/frontend-out.log',

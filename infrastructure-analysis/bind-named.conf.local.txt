@@ -1,0 +1,16 @@
+--- named.conf.local content ---
+// Include the certbot key definition
+
+// Your existing yrefy zone
+zone "yrefy" {
+    type master;
+    file "/etc/bind/db.yrefy";
+    allow-query { any; };
+};
+
+// Add zone for it.yrefy subdomain
+zone "it.yrefy" {
+    type master;
+    file "/etc/bind/db.it.yrefy";
+    allow-query { any; };
+};

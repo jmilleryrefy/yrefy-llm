@@ -1,0 +1,14 @@
+--- /etc/bind/db.it.yrefy content ---
+$TTL    604800
+@       IN      SOA     ns1.it.yrefy. admin.it.yrefy. (
+                     2024110102     ; Serial (increment this)
+                         604800     ; Refresh
+                          86400     ; Retry
+                        2419200     ; Expire
+                         604800 )   ; Negative Cache TTL
+; Name servers
+@       IN      NS      ns1.it.yrefy.
+; A records
+@       IN      A       192.168.128.82
+ns1     IN      A       192.168.128.82
+*       IN      A       192.168.128.82  ; Wildcard record for all subdomains

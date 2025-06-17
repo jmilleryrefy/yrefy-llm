@@ -1,0 +1,336 @@
+📋 Container Details:
+[
+    {
+        "Id": "3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85",
+        "Created": "2025-06-02T17:54:53.514638308Z",
+        "Path": "/init",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 34488,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-06-04T17:26:45.904762726Z",
+            "FinishedAt": "2025-06-04T17:26:44.508792012Z"
+        },
+        "Image": "sha256:32c3766f586d95aad5810a26e2a586923c88c7b7f874647f12e075bc0abe26f1",
+        "ResolvConfPath": "/var/lib/docker/containers/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85/hostname",
+        "HostsPath": "/var/lib/docker/containers/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85/hosts",
+        "LogPath": "/var/lib/docker/containers/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85-json.log",
+        "Name": "/nginx-proxy-manager_nginx-proxy-manager_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/yrefy-it/nginx-proxy-manager/data:/data:rw",
+                "/home/yrefy-it/nginx-proxy-manager/letsencrypt:/etc/letsencrypt:rw",
+                "/home/yrefy-it/nginx-proxy-manager/certs:/etc/nginx/certs:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "nginx-proxy-manager_npm_network",
+            "PortBindings": {
+                "443/tcp": [
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "443"
+                    },
+                    {
+                        "HostIp": "100.71.177.68",
+                        "HostPort": "443"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "80"
+                    },
+                    {
+                        "HostIp": "100.71.177.68",
+                        "HostPort": "80"
+                    }
+                ],
+                "81/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "81"
+                    },
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "81"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/dc0598e6b21606e32a0be9890dae3b91a70d1eded539e115e4c905fe35746946-init/diff:/var/lib/docker/overlay2/3da18723f480c78b1d63f68fcad1bf480c64d8ecb1522ae0bf01664ee9dcbc4c/diff:/var/lib/docker/overlay2/4fd1884ed66045a8aab0ce2f09e52b087c0ed722eb8bdfc3ffe4f6f6c88a3ffb/diff:/var/lib/docker/overlay2/4065b559b738caec83cb59cf12ce4880d314f2207f44454a1eaa5369d482125e/diff:/var/lib/docker/overlay2/03b7913fe1682531e87424ec75b5068e8a467552b9f8ebc9abeb8e34cd411870/diff:/var/lib/docker/overlay2/ab28b45cc3eb26124212653e5d9557bdddfa8a9e00150011e776ad69f1f64866/diff:/var/lib/docker/overlay2/ddeb4316442e43d8080653f793b6ce6c89a2cfa307c9a7c024e21f52df2e8616/diff:/var/lib/docker/overlay2/2f0d6631b68ee0d96602cba2caccfdd5e58a8ae56ea87cdd04e20ad4c4de3c23/diff:/var/lib/docker/overlay2/e6413fd437725f599c1faabcd00401b32a07b71775375a6bf10ad2d1b127e499/diff:/var/lib/docker/overlay2/2d627cb7e02b6fa8ebb2bf435eb2090b489ca979b73b25c93446546f07679c49/diff:/var/lib/docker/overlay2/464a499437d518091e3f6062b4183133b538d41b6d059473aca0fd00eb38b04b/diff:/var/lib/docker/overlay2/a060d1a4a91c584bc87481d04b922969fb55db52572cf7d3116bc80da1e732aa/diff:/var/lib/docker/overlay2/c199470b50c04f49f837e4c65d51ae179366cfba64209cfdbf36c46aae238149/diff:/var/lib/docker/overlay2/004df8e58c57ab3bfbd3d9e85cd4dade575a8e754db9c84422e25ae49f3554d7/diff:/var/lib/docker/overlay2/5d4b65b0c3c02f0747e141d6ea171a63a82a3b666dd9d36de9e0a4ea3f5b680f/diff:/var/lib/docker/overlay2/d0f1ff88da96ab2a50207d279d557ad0141342a816024585cead2795b6a0bbee/diff:/var/lib/docker/overlay2/221731bc464a4762f8706377a6574980d7f8a9c8af5fc37eaf66992d8735433f/diff:/var/lib/docker/overlay2/ba58ba34c79a069e590efd453bf9044f665a1d13bd4d12d556ee1a079c4dbe4f/diff:/var/lib/docker/overlay2/d53c654cdfabd840fbc004bf8d54fbbffc23cfa023632ebf4da48f5e54d3e86a/diff:/var/lib/docker/overlay2/6be8eb28e2227b584674da88b5423df654564712ccbac3e149ff3e5cb7357d18/diff:/var/lib/docker/overlay2/a7490acce623c5ee8b8a9f6378eb3db8012cabae3cb265d2c4e17f48341cd3af/diff:/var/lib/docker/overlay2/08404ed6b4e34540c1a5383eeed2a36542d0b0c5c836ab1b243e0e616830ce73/diff:/var/lib/docker/overlay2/359cd4a5584ecb65859eed6df5b6b2c3cb2884d76fd00687169958754261d655/diff:/var/lib/docker/overlay2/a0a8dc2af5ffe674ba1fafcaf89483d1127ca0edc9e37f04b956ee927bb0c837/diff:/var/lib/docker/overlay2/924cb2298aca1b66ce03f194f363e509fed302b0c30198afb50d7b17e068edce/diff:/var/lib/docker/overlay2/5157b2aa35b594914e66f6bba35d1235057932da826f9b04998ba615c53e5ba0/diff:/var/lib/docker/overlay2/670fab255efa1a46a93497cf62d499bd268e8d4d0dd82045b78405f378167816/diff:/var/lib/docker/overlay2/84236af3084e63c8792a322d21144983dd19a10c5d182766cc7f1e537c8e26ab/diff:/var/lib/docker/overlay2/68c1e8de0d66f04adad9d94ca1c16471061035e0d51baaea72b535ebac59a792/diff:/var/lib/docker/overlay2/1155f3d8d2d73bbcef3e9ef5480c85be5d68ea6462357e39e621fb131d5fd210/diff:/var/lib/docker/overlay2/e0ae7d3ee1e5dbcec7be18d4d8eacfea96599aa8cc155b9edbd6b6a491604e4e/diff:/var/lib/docker/overlay2/020e6297f94a9bb38ae733dc5d2f0b097b55d0ea031e8f17772e5e8755665dcf/diff:/var/lib/docker/overlay2/35454f0d55b7bd62e8d12fa7bd7b57bc15198b89d269bf77a7fac8dc1f46b142/diff:/var/lib/docker/overlay2/7c08a83eb53afcd53fa95cb4ba7e6531d7698c7084f8d0ac0608d58bc61648dc/diff:/var/lib/docker/overlay2/8a4a3fbc33423b3ec70c7c76907bf0538780aea92c15298b14deb8c90c4019c9/diff:/var/lib/docker/overlay2/2165629d7a4e5610b3a5e8c546f90e6c6b460075ab1356938d4368158926dae0/diff",
+                "MergedDir": "/var/lib/docker/overlay2/dc0598e6b21606e32a0be9890dae3b91a70d1eded539e115e4c905fe35746946/merged",
+                "UpperDir": "/var/lib/docker/overlay2/dc0598e6b21606e32a0be9890dae3b91a70d1eded539e115e4c905fe35746946/diff",
+                "WorkDir": "/var/lib/docker/overlay2/dc0598e6b21606e32a0be9890dae3b91a70d1eded539e115e4c905fe35746946/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/yrefy-it/nginx-proxy-manager/data",
+                "Destination": "/data",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/yrefy-it/nginx-proxy-manager/letsencrypt",
+                "Destination": "/etc/letsencrypt",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/yrefy-it/nginx-proxy-manager/certs",
+                "Destination": "/etc/nginx/certs",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "3ca2658a0c2d",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "443/tcp": {},
+                "80/tcp": {},
+                "81/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/certbot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
+                "OPENRESTY_VERSION=1.25.3.2",
+                "CROWDSEC_OPENRESTY_BOUNCER_VERSION=0.1.7",
+                "CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt",
+                "SUPPRESS_NO_CONFIG_WARNING=1",
+                "S6_BEHAVIOUR_IF_STAGE2_FAILS=1",
+                "S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0",
+                "S6_FIX_ATTRS_HIDDEN=1",
+                "S6_KILL_FINISH_MAXTIME=10000",
+                "S6_VERBOSITY=1",
+                "NODE_ENV=production",
+                "NPM_BUILD_VERSION=2.12.1",
+                "NPM_BUILD_COMMIT=5084cb7",
+                "NPM_BUILD_DATE=2024-10-16 23:59:01 UTC",
+                "NODE_OPTIONS=--openssl-legacy-provider"
+            ],
+            "Cmd": null,
+            "Image": "jc21/nginx-proxy-manager:latest",
+            "Volumes": {
+                "/data": {},
+                "/etc/letsencrypt": {},
+                "/etc/nginx/certs": {}
+            },
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "/init"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "9f9dfbeb9c851ca68250312a7d46d45607cffd094c1462b58df09e425ce87cac",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "nginx-proxy-manager",
+                "com.docker.compose.project.config_files": "docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/yrefy-it/nginx-proxy-manager",
+                "com.docker.compose.service": "nginx-proxy-manager",
+                "com.docker.compose.version": "1.29.2",
+                "maintainer": "Jamie Curnow <jc@jc21.com>",
+                "org.label-schema.cmd": "docker run --rm -ti jc21/nginx-proxy-manager:latest",
+                "org.label-schema.description": "Docker container for managing Nginx proxy hosts with a simple, powerful interface ",
+                "org.label-schema.license": "MIT",
+                "org.label-schema.name": "nginx-proxy-manager",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.url": "https://github.com/jc21/nginx-proxy-manager",
+                "org.label-schema.vcs-url": "https://github.com/jc21/nginx-proxy-manager.git"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "2d5d7519fa7fd976f24a991aecd1d1010ef774d0f1e1a6673f8e2f9b0758a17e",
+            "SandboxKey": "/var/run/docker/netns/2d5d7519fa7f",
+            "Ports": {
+                "443/tcp": [
+                    {
+                        "HostIp": "100.71.177.68",
+                        "HostPort": "443"
+                    },
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "443"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "100.71.177.68",
+                        "HostPort": "80"
+                    },
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "80"
+                    }
+                ],
+                "81/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "81"
+                    },
+                    {
+                        "HostIp": "192.168.128.82",
+                        "HostPort": "81"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "nginx-proxy-manager_npm_network": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "3ca2658a0c2d",
+                        "nginx-proxy-manager"
+                    ],
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null,
+                    "NetworkID": "0fbddc19a2602f3916795a99e8c1abfc9e59dc8604ef213ef6c0825a7d5846b1",
+                    "EndpointID": "2d32b64865a5963d227657b0ce9e234636a06e5c5e3c1e5e43bb1bb7ec8a925a",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "nginx-proxy-manager_nginx-proxy-manager_1",
+                        "3ca2658a0c2d",
+                        "nginx-proxy-manager"
+                    ]
+                }
+            }
+        }
+    }
+]

@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "https": "node server.js",
+    "start:https": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@azure/msal-browser": "^4.13.1",

@@ -1,7 +1,7 @@
 // components/ChatInterface.tsx
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useAuth } from './AuthProvider';
 import ReactMarkdown from 'react-markdown';
 
@@ -19,7 +19,7 @@ interface Model {
   modified_at?: string;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8081';
 
 export default function ChatInterface() {
   const { accessToken, user } = useAuth();
@@ -32,21 +32,7 @@ export default function ChatInterface() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  useEffect(() => {
-    if (accessToken) {
-      fetchModels();
-    }
-  }, [accessToken]);
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const fetchModels = async () => {
+  const fetchModels = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/models`, {
         headers: { Authorization: `Bearer ${accessToken}` }
@@ -63,6 +49,20 @@ export default function ChatInterface() {
       console.error('Failed to fetch models:', error);
       setError('Unable to connect to AI service');
     }
+  }, [accessToken]);
+
+  useEffect(() => {
+    if (accessToken) {
+      fetchModels();
+    }
+  }, [accessToken, fetchModels]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const sendMessage = async () => {
@@ -180,7 +180,7 @@ export default function ChatInterface() {
           <div className="text-center text-gray-500 mt-12">
             <div className="text-6xl mb-4">🤖</div>
             <h3 className="text-xl font-semibold mb-2">Welcome to Company AI Assistant</h3>
-            <p>Ask me anything! I'm powered by {selectedModel} and ready to help.</p>
+            <p>Ask me anything! I&apos;m powered by {selectedModel} and ready to help.</p>
           </div>
         )}
 

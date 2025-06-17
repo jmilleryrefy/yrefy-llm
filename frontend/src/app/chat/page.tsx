@@ -1,20 +1,20 @@
-// app/page.tsx
+// app/chat/page.tsx
 'use client';
 
-import { useAuth } from '../components/AuthProvider';
-import Login from '../components/Login';
+import { useAuth } from '../../components/AuthProvider';
+import ChatInterface from '../../components/ChatInterface';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
-export default function HomePage() {
+export default function ChatPage() {
   const { isAuthenticated, loading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push('/chat');
+    if (!loading && !isAuthenticated) {
+      router.push('/');
     }
-  }, [isAuthenticated, router]);
+  }, [isAuthenticated, loading, router]);
 
   if (loading) {
     return (
@@ -25,8 +25,8 @@ export default function HomePage() {
   }
 
   if (!isAuthenticated) {
-    return <Login />;
+    return null; // Will redirect
   }
 
-  return null; // Will redirect to /chat
+  return <ChatInterface />;
 }

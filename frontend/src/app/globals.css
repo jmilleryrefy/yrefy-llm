@@ -8,27 +8,29 @@ body {
   height: 100%;
 }
 
-.prose-invert {
-  @apply text-white;
-}
+@layer components {
+  .prose-invert {
+    @apply text-white;
+  }
 
-.prose-invert h1,
-.prose-invert h2,
-.prose-invert h3,
-.prose-invert h4,
-.prose-invert h5,
-.prose-invert h6 {
-  @apply text-white;
-}
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    @apply text-white;
+  }
 
-.prose-invert code {
-  @apply bg-white bg-opacity-20 text-white px-1 py-0.5 rounded;
-}
+  .prose-invert code {
+    @apply bg-white/20 text-white px-1 py-0.5 rounded;
+  }
 
-.prose-invert pre {
-  @apply bg-white bg-opacity-10 border border-white border-opacity-20;
-}
+  .prose-invert pre {
+    @apply bg-white/10 border border-white/20;
+  }
 
-.prose-invert pre code {
-  @apply bg-transparent;
+  .prose-invert pre code {
+    @apply bg-transparent;
+  }
 }

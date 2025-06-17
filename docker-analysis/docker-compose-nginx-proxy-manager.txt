@@ -1,0 +1,27 @@
+--- /home/yrefy-it/nginx-proxy-manager/docker-compose.yml (nginx relevant parts) ---
+version: '3'
+services:
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      # Local network bindings
+      - '192.168.128.82:80:80'      # HTTP
+      - '192.168.128.82:443:443'    # HTTPS
+      # Tailscale bindings
+      - '100.71.177.68:80:80'       # HTTP on Tailscale
+      - '100.71.177.68:443:443'     # HTTPS on Tailscale
+      # Admin panel (localhost only)
+      - '127.0.0.1:81:81'           # Secure admin access
+      # Admin panel (accessible from local network)
+      - '192.168.128.82:81:81'      # Admin interface
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt  # Keep for compatibility
+      - ./certs:/etc/nginx/certs        # Your custom certificates
+    networks:
+      - npm_network
+
+networks:
+  npm_network:
+    driver: bridge
