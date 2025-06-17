@@ -62,3 +62,4 @@ data/usage.db
 data/logs/
 *.logbackend/.env
 backend/.env
+frontend/.next/
