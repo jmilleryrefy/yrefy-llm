@@ -23,10 +23,10 @@ module.exports = {
     {
       name: 'yrefy-llm-frontend',
       script: 'npm',
-      args: 'run start -- --hostname 0.0.0.0 --port 3002',  // Bind to all interfaces
+      args: 'run start -- --hostname 0.0.0.0 --port 3005',  // Bind to all interfaces
       cwd: '/home/yrefy-it/yrefy-llm/frontend',
       env: {
-        PORT: 3002,
+        PORT: 3005,
         NODE_ENV: 'production',
         HOSTNAME: '0.0.0.0'  // Bind to all interfaces for NPM access
       },

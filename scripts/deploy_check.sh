@@ -37,8 +37,8 @@ else
 fi
 
 # Test Frontend
-if curl -s http://localhost:3002 > /dev/null; then
-    echo "   ✅ Frontend: Responding on port 3002"
+if curl -s http://localhost:3005 > /dev/null; then
+    echo "   ✅ Frontend: Responding on port 3005"
 else
     echo "   ❌ Frontend: Not responding"
 fi
@@ -50,7 +50,7 @@ pm2 status | grep yrefy-llm
 echo ""
 echo "4. Port Usage:"
 echo "   Port 8081 (Backend):  $(lsof -i :8081 | wc -l) connections"
-echo "   Port 3002 (Frontend): $(lsof -i :3002 | wc -l) connections"
+echo "   Port 3005 (Frontend): $(lsof -i :3005 | wc -l) connections"
 echo "   Port 11434 (Ollama):  $(lsof -i :11434 | wc -l) connections"
 
 echo ""
@@ -63,7 +63,7 @@ if curl -s http://localhost:8081/health | grep -q '"status":"healthy"'; then
     echo "   Status: 🟢 FULLY OPERATIONAL"
     echo ""
     echo "🎉 Your LLM System is Ready!"
-    echo "   🌐 Access: http://localhost:3002"
+    echo "   🌐 Access: http://localhost:3005"
     echo "   🔧 API: http://localhost:8081"
     echo "   🤖 Ollama: http://localhost:11434"
     echo ""

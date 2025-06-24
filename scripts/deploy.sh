@@ -53,8 +53,8 @@ else
 fi
 
 # Test frontend
-if curl -s http://localhost:3002 > /dev/null; then
-    echo "✅ Frontend responding on port 3002"
+if curl -s http://localhost:3005 > /dev/null; then
+    echo "✅ Frontend responding on port 3005"
 else
     echo "❌ Frontend not responding"
 fi
@@ -64,6 +64,6 @@ pm2 save
 
 echo ""
 echo "✅ Deployment Complete!"
-echo "🌐 Access your LLM: http://localhost:3002"
+echo "🌐 Access your LLM: http://localhost:3005"
 echo "📊 PM2 status: pm2 status"
 echo "📝 View logs: pm2 logs"

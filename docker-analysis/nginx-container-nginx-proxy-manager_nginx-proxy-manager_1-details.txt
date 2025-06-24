@@ -12,11 +12,11 @@
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 34488,
+            "Pid": 536003,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2025-06-04T17:26:45.904762726Z",
-            "FinishedAt": "2025-06-04T17:26:44.508792012Z"
+            "StartedAt": "2025-06-24T15:09:14.094544958Z",
+            "FinishedAt": "2025-06-24T15:09:13.595245024Z"
         },
         "Image": "sha256:32c3766f586d95aad5810a26e2a586923c88c7b7f874647f12e075bc0abe26f1",
         "ResolvConfPath": "/var/lib/docker/containers/3ca2658a0c2d549f8e2fbfb47c2c5e108a1957f8b72089c07a82760fc2bd3c85/resolv.conf",
@@ -259,8 +259,8 @@
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "2d5d7519fa7fd976f24a991aecd1d1010ef774d0f1e1a6673f8e2f9b0758a17e",
-            "SandboxKey": "/var/run/docker/netns/2d5d7519fa7f",
+            "SandboxID": "db1710d025efa9fdf36e0ba3f43516a281ccecf5776775f31271429ad67613b7",
+            "SandboxKey": "/var/run/docker/netns/db1710d025ef",
             "Ports": {
                 "443/tcp": [
                     {
@@ -317,7 +317,7 @@
                     "MacAddress": "02:42:ac:12:00:02",
                     "DriverOpts": null,
                     "NetworkID": "0fbddc19a2602f3916795a99e8c1abfc9e59dc8604ef213ef6c0825a7d5846b1",
-                    "EndpointID": "2d32b64865a5963d227657b0ce9e234636a06e5c5e3c1e5e43bb1bb7ec8a925a",
+                    "EndpointID": "f8cee547229e9a2f62a084dfe349d24acec32317279f41fa9cc4fabf8f6bdb38",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,

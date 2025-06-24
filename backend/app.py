@@ -19,10 +19,10 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'change-this-secret-key')
+app.secret_key = os.environ.get('SECRET_KEY', '39b04bf540ffa81c95d880dd58a62c48b53cbe9b4d857f163b1df727548324ab')
 
 # Configure CORS for Tailscale and local access
-allowed_origins = os.environ.get('ALLOWED_ORIGINS', 'http://localhost:3001').split(',')
+allowed_origins = os.environ.get('ALLOWED_ORIGINS', 'http://localhost:3005').split(',')
 CORS(app, supports_credentials=True, origins=allowed_origins)
 
 # Configuration
